@@ -1,0 +1,32 @@
+.inputFilter {
+  background-color: transparent;
+  border-color: #303245;
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #303245;
+  font-size: 18px;
+  height: 50px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 250px;
+}
+
+.labelFilter {
+  width: 200px;
+  color: #303245;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  transition: transform 200ms, color 200ms;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}

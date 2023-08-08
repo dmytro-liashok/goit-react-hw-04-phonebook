@@ -1,0 +1,72 @@
+.form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 250px;
+}
+
+.input {
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: #303245;
+  font-size: 18px;
+  height: 50px;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.label {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  transition: transform 200ms, color 200ms;
+  margin-bottom: 5px;
+}
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.btnSubmit {
+  --c: #229091;
+
+  box-shadow: 0 0 0 0.1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+  outline-offset: 0.1em;
+  transition: background-size 0.4s, background-position 0s 0.4s;
+}
+.btnSubmit:hover {
+  --_p: 100%;
+  transition: background-position 0.4s, background-size 0s;
+  color: #fff;
+}
+.btnSubmit:active {
+  box-shadow: 0 0 9e9Q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
+
+.btnSubmit {
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0.1em 0.6em;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  height: 55px;
+  padding: 10px;
+}
+
+p {
+  color: #303245;
+}
